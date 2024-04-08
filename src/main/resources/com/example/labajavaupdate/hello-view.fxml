@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="416.0" prefWidth="689.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.labajavaupdate.HelloController">
+  <children>
+    <FlowPane prefHeight="200.0" prefWidth="200.0">
+      <children>
+        <Pane fx:id="gameWindow" prefHeight="353.0" prefWidth="529.0" style="-fx-background-color: #E3E3E3;">
+          <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#232949" height="354.0" layoutX="-6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="54.0" />
+            <Polygon fill="#28798d" layoutX="64.0" layoutY="150.0" points="-53.0, -6.0, -53.0, 68.0, -27.0, 31.0" stroke="#8a8a8a" strokeType="INSIDE" strokeWidth="0.0" />
+            <Separator layoutX="526.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" orientation="VERTICAL" prefHeight="353.0" prefWidth="12.0" />
+            <Line endX="117.0" endY="-60.0" layoutX="366.0" layoutY="60.0" startX="117.0" startY="293.0" />
+            <Line endX="85.0" endY="-61.0" layoutX="319.0" layoutY="61.0" startX="85.0" startY="292.0" />
+            <Circle fx:id="Big_Circle" fill="#6c739c" layoutX="404.0" layoutY="177.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="Small_Circle" fill="#6fa9f3" layoutX="483.0" layoutY="177.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Polygon fx:id="Strela" fill="#f00000" layoutX="74.0" layoutY="146.0" points="-14.0, 26.0, -14.0, 38.0, -3.0, 32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+          </children>
+        </Pane>
+        <VBox alignment="TOP_CENTER" prefHeight="328.0" prefWidth="160.0" style="-fx-background-color: #232949;">
+          <children>
+            <Label alignment="BOTTOM_CENTER" text="Счет игрока:" textFill="WHITE">
+              <VBox.margin>
+                <Insets bottom="10.0" top="30.0" />
+              </VBox.margin>
+              <font>
+                <Font name="Cambria Bold" size="19.0" />
+              </font>
+            </Label>
+            <Label fx:id="shootsScoreLable" text="0" textFill="WHITE">
+              <font>
+                <Font name="Roboto" size="19.0" />
+              </font>
+            </Label>
+            <Label text="Выстрелов:" textFill="#fffbfb">
+              <font>
+                <Font name="Cambria Bold" size="19.0" />
+              </font>
+              <VBox.margin>
+                <Insets top="20.0" />
+              </VBox.margin>
+            </Label>
+            <Label fx:id="CountshootsLable" text="0" textFill="WHITE">
+              <VBox.margin>
+                <Insets top="10.0" />
+              </VBox.margin>
+              <font>
+                <Font name="Cambria Bold" size="19.0" />
+              </font>
+            </Label>
+          </children>
+        </VBox>
+      </children>
+    </FlowPane>
+    <Pane fx:id="panelButton" prefHeight="163.0" prefWidth="689.0" style="-fx-background-color: #232949;">
+      <children>
+        <Button layoutX="51.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#StartButton" prefHeight="32.0" prefWidth="98.0" text="Начать игру" textFill="WHITE">
+          <font>
+            <Font name="Cambria Bold" size="12.0" />
+          </font>
+          <cursor>
+            <Cursor fx:constant="HAND" />
+          </cursor>
+        </Button>
+        <Button layoutX="174.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#PauseButton" prefHeight="32.0" prefWidth="60.0" text="Пауза" textAlignment="CENTER" textFill="WHITE">
+          <font>
+            <Font name="Cambria Bold" size="12.0" />
+          </font>
+          <cursor>
+            <Cursor fx:constant="HAND" />
+          </cursor>
+        </Button>
+        <Button layoutX="261.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ShootButton" prefHeight="32.0" prefWidth="95.0" text="Выстрелить" textFill="WHITE">
+          <font>
+            <Font name="Cambria Bold" size="12.0" />
+          </font>
+          <cursor>
+            <Cursor fx:constant="HAND" />
+          </cursor>
+        </Button>
+        <Button layoutX="382.0" layoutY="16.0" mnemonicParsing="false" onAction="#ExitButton" prefHeight="32.0" prefWidth="115.0" text="Остановить игру" textFill="WHITE">
+          <font>
+            <Font name="Cambria Bold" size="12.0" />
+          </font>
+        </Button>
+      </children>
+    </Pane>
+  </children>
+</VBox>
