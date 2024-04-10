@@ -4,6 +4,7 @@ module com.example.labajavaupdate {
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
+    requires com.google.gson;
 
     opens com.example.labajavaupdate to javafx.fxml;
     exports com.example.labajavaupdate;

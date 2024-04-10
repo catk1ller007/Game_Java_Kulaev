@@ -1,18 +1,28 @@
 //package com.example.labajavaupdate;
 //
+//import javafx.application.Platform;
 //import javafx.fxml.FXML;
 //import javafx.scene.control.Label;
-//import javafx.application.Platform;
 //import javafx.scene.layout.Pane;
 //import javafx.scene.shape.Circle;
 //import javafx.scene.shape.Polygon;
 //
-//import java.util.List;
+//import java.net.Socket;
 //
 //import static java.lang.Math.sqrt;
 //
+//public class ClientHandler{
+//    private Socket clientSocket;
+//    private String username;
 //
-//public class HelloController {
+//    public ClientHandler() {
+//        // пустой конструктор
+//    }
+//    public ClientHandler(Socket socket, String user) {
+//        this.clientSocket = socket;
+//        this.username = user;
+//    }
+//
 //    public GameState state = GameState.OFF;
 //    public ArrowState arrowState = ArrowState.NOSHOOT;
 //    @FXML
@@ -70,17 +80,18 @@
 //        }
 //    }
 //
+//    synchronized void resumeGame() {
+//        state = GameState.ON;
+//        this.notifyAll();
+//    }
+//
 //    @FXML
 //    void PauseButton() {
 //        if (state == GameState.ON) {
 //            state = GameState.PAUSE;
 //        } else if (state == GameState.PAUSE) {
-//            resume();
+//            resumeGame();
 //        }
-//    }
-//    synchronized void resume() {
-//        state = GameState.ON;
-//        this.notifyAll();
 //    }
 //    synchronized void pause() throws InterruptedException {
 //        this.wait();
